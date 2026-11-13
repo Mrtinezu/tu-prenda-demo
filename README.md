@@ -1,60 +1,92 @@
-# Tu prenda
+# Pieta Tactil
+### La información de una prenda, al alcance de más personas.
 
-Demo móvil de información de prendas por QR, con descripciones de voz, fotos y preguntas frecuentes.
+**Escanea. Escucha. Pregunta. Elige.**
 
-**[Abrir la demo](https://mrtinezu.github.io/tu-prenda-demo/)** · Desarrollado por [Mrtinezu](https://github.com/Mrtinezu)
+Pieta Tactil es una experiencia móvil de moda accesible que convierte el QR de una prenda en un punto de acceso a sus detalles: diseño, colores, talla, materiales y cuidados. Combina fotografías, interacción por voz mediante **Web Speech API** y consultas por texto, con modos pensados para personas ciegas, personas sordas y público general.
 
-## Cómo probarla
+El objetivo es sencillo: que más personas puedan explorar una prenda y tomar decisiones de compra con mayor autonomía, desde su propio teléfono.
 
-1. Abre uno de los enlaces de prendas o escanea su QR.
-2. En modo general, toca la esfera para escuchar la descripción y el botón del micrófono para preguntar.
-3. Toca la tarjeta de la prenda para ver sus fotos y consultar por texto.
-4. En Accesibilidad puedes cambiar de modo en cualquier momento.
+**[Probar Pieta Tactil](https://mrtinezu.github.io/tu-prenda-demo/)** · [Explorar las prendas piloto](#tres-prendas-una-misma-experiencia) · Desarrollado por [Mrtinezu](https://github.com/Mrtinezu)
 
-| Prenda piloto | Enlace |
+---
+
+## Una etiqueta puede decir poco. Una experiencia accesible puede contar más.
+
+El aspecto de una prenda suele comunicarse a través de fotografías, escaparates y detalles que no siempre son accesibles para todos. Una talla o una composición tampoco explican por sí solas dónde está un estampado, qué colores combina la prenda o cómo es su corte.
+
+Pieta Tactil propone llevar esa información al canal que cada persona prefiera: **voz, texto o imagen**, dentro de una interfaz móvil que se abre al escanear el QR, sin instalar una aplicación.
+
+## Una experiencia que se adapta a la persona
+
+| Modo | Experiencia |
 | --- | --- |
-| Varsity Perú roja | [Ver prenda](https://mrtinezu.github.io/tu-prenda-demo/?prenda=pieta-varsity-peru-rojo) |
-| Polo PLAY blanco | [Ver prenda](https://mrtinezu.github.io/tu-prenda-demo/?prenda=pieta-cdg-basic-heart-blanco) |
-| Casaca Stüssy azul | [Ver prenda](https://mrtinezu.github.io/tu-prenda-demo/?prenda=pieta-stussy-capucha-azul) |
+| **Personas ciegas** | Descripción hablada y consultas por voz desde una sola pantalla. Al terminar la descripción, tocar la pantalla activa el micrófono para facilitar la interacción. |
+| **Personas sordas** | Acceso directo a las fotos, descripción escrita y consultas por texto, sin depender del audio. |
+| **General** | Exploración visual y asistente de voz. Cada persona puede elegir cómo conocer la prenda. |
 
-## Modos de accesibilidad
+El modo de accesibilidad se recuerda en el dispositivo y puede cambiarse desde la propia interfaz.
 
-- **General:** asistente de voz y ficha con fotos y consultas por texto.
-- **Personas ciegas:** una pantalla de voz. Una vez terminada la descripción, tocar la pantalla activa el micrófono. La descripción inicial queda protegida frente a esos toques para evitar cortes accidentales.
-- **Personas sordas:** acceso directo a la ficha visual y consultas por texto, sin reproducción de voz.
+## Del QR a una conversación sobre la prenda
 
-La compatibilidad con lectores de pantalla, permisos, audio y reconocimiento de voz depende del navegador y dispositivo. El prototipo todavía requiere pruebas de accesibilidad con usuarios; no declara una certificación de conformidad.
+1. **Escanea el QR:** se abre la prenda correspondiente.
+2. **Conoce sus detalles:** escucha la descripción o explora la ficha visual.
+3. **Haz una pregunta:** «¿Cuál es el diseño?», «¿De qué material es?» o «¿Cómo la cuido?».
+4. **Recibe una respuesta concreta:** la información se adapta a la prenda seleccionada.
 
-## Qué hace esta versión
+Las descripciones priorizan lo que ayuda a identificar y evaluar la pieza: apariencia, talla, material y características relevantes. Cuando un dato de cuidados necesita confirmación, la experiencia orienta a consultar la etiqueta y, si no ofrece la información, al personal de la tienda.
 
-Las respuestas se seleccionan a partir de preguntas frecuentes e identificación local de palabras e intenciones, con algunas variantes y preguntas de seguimiento. Los audios están pregrabados e incluidos en el HTML. No hay un modelo generativo conectado ni una API de IA de pago.
+## Tres prendas, una misma experiencia
 
-La talla M es una selección de demostración. Las fotos y los datos del catálogo son referencias para el piloto; no representan disponibilidad, stock ni precios vigentes. Para comprar, verifica los datos de la pieza concreta con el vendedor.
+| Prenda piloto | Explorar |
+| --- | --- |
+| Varsity Perú roja | [Abrir experiencia](https://mrtinezu.github.io/tu-prenda-demo/?prenda=pieta-varsity-peru-rojo) |
+| Polo PLAY blanco | [Abrir experiencia](https://mrtinezu.github.io/tu-prenda-demo/?prenda=pieta-cdg-basic-heart-blanco) |
+| Casaca Stüssy azul | [Abrir experiencia](https://mrtinezu.github.io/tu-prenda-demo/?prenda=pieta-stussy-capucha-azul) |
 
-## Estructura y publicación
+Cada prenda tiene su propio enlace y QR. El piloto permite mostrar el recorrido completo: escaneo, selección de accesibilidad, descripción y consultas.
 
-- `index.html`: demo autocontenida; incluye los estilos, JavaScript, fotos y audios.
-- `.nojekyll`: indica que GitHub Pages debe servir los archivos sin procesarlos con Jekyll.
-- `.gitignore`: excluye credenciales y archivos locales de futuras incorporaciones.
-- `LICENSE`: reserva de derechos sobre las contribuciones originales.
-- `THIRD_PARTY_NOTICES.md`: procedencia de fotos, datos, marcas y otros recursos.
-- `SECURITY.md`: manejo de credenciales y comunicación de problemas de seguridad.
+## Tecnología al servicio de la experiencia
 
-La publicación utiliza GitHub Pages desde `main`, en la raíz del repositorio. Puedes descargar `index.html` para ver la interfaz; para probar el micrófono, usa la URL HTTPS y concede el permiso cuando el navegador lo solicite.
+- **Web móvil:** HTML, CSS y JavaScript, con una primera pantalla de voz que mantiene los controles visibles.
+- **Entrada de voz:** reconocimiento del navegador mediante Web Speech API, con soporte para variantes de preguntas y transcripciones alternativas.
+- **Respuestas habladas:** audios de demostración integrados para las descripciones y preguntas frecuentes.
+- **Consultas por texto:** el mismo contenido de producto disponible desde la ficha visual.
+- **Identificación por QR:** enlaces con un identificador de prenda para abrir el contenido correspondiente.
+- **Validación del piloto:** 393 casos de preguntas de prueba, comprobaciones del enlace entre respuestas y audios, y protección frente a toques que interrumpan la descripción inicial en modo para personas ciegas.
 
-## Privacidad y credenciales
+## De piloto funcional a asistente conectado por API
 
-- Esta versión no incorpora claves de API ni un backend propio.
-- Las consultas y respuestas no se guardan de forma persistente por el código de la demo. La preferencia de accesibilidad se conserva localmente mediante `localStorage`.
-- El reconocimiento de voz lo proporciona el navegador y puede procesar el audio en servicios de su proveedor. No debe asumirse que funciona sin conexión.
-- La tipografía se solicita a Google Fonts y el alojamiento lo proporciona GitHub Pages; estas solicitudes están sujetas a las políticas de sus proveedores.
-- El código y los recursos de este repositorio son públicos. Nunca debe colocarse una clave privada en HTML, JavaScript ni archivos publicados. Una futura API de IA deberá usar un backend con las credenciales del lado del servidor.
+**Esta versión ya permite probar la experiencia con tres prendas.** Las respuestas actuales utilizan un catálogo de preguntas frecuentes, reglas de reconocimiento de intenciones y voz pregrabada.
 
-Consulta [SECURITY.md](SECURITY.md) para las precauciones de mantenimiento.
+La siguiente etapa propuesta es conectar un modelo de IA mediante una API, a través de un backend que consulte la información autorizada de cada prenda. Esto permitiría ampliar la conversación manteniendo el catálogo como referencia y evitando inventar características del producto.
 
-## Autoría y uso
+La evolución del producto contempla:
 
-© 2026 Mrtinezu. Todos los derechos reservados sobre las contribuciones originales que correspondan al autor. Este repositorio público se comparte para mostrar y evaluar el prototipo; no se concede una licencia abierta de reutilización. Consulta [LICENSE](LICENSE).
+- **IA conectada al catálogo:** preguntas más abiertas y respuestas vinculadas a la pieza seleccionada.
+- **Voz natural:** integración de reconocimiento y síntesis de voz según las necesidades del piloto.
+- **Gestión de prendas:** incorporación de nuevas fichas y generación de sus QR.
+- **Pruebas con usuarios:** evaluación con personas ciegas y sordas para mejorar interacción, claridad y autonomía.
 
-Las fotos, nombres comerciales, marcas y materiales de terceros conservan sus respectivos titulares y condiciones. Su presencia no implica afiliación ni autorización comercial. Los detalles de procedencia y alcance están en [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Estas capacidades describen la hoja de ruta; la demo pública actual todavía no utiliza un modelo generativo remoto.
+
+## Probar y ejecutar
+
+Abre la [demo HTTPS](https://mrtinezu.github.io/tu-prenda-demo/) desde un móvil. Para preguntar por voz, concede el permiso del micrófono cuando el navegador lo solicite. La disponibilidad del reconocimiento depende del dispositivo y navegador.
+
+El archivo `index.html` contiene la interfaz, los scripts, las fotografías y los audios del piloto. GitHub Pages publica el sitio desde la raíz de `main`.
+
+La talla M es la selección de demostración. Las fichas no garantizan stock, precios vigentes ni condiciones de compra. El prototipo requiere evaluación de accesibilidad con usuarios y no declara una certificación de conformidad.
+
+## Privacidad y seguridad
+
+La demo no incluye claves de API ni un backend propio. Las conversaciones no se guardan de forma persistente por su código; la preferencia de accesibilidad se conserva localmente. El reconocimiento de voz puede utilizar servicios del proveedor del navegador.
+
+El código y los recursos publicados son accesibles al visitante. Las credenciales de futuras integraciones deberán mantenerse en el servidor. Consulta [SECURITY.md](SECURITY.md) y las exclusiones de archivos en `.gitignore`.
+
+## Autoría y recursos
+
+© 2026 Mrtinezu. Todos los derechos reservados sobre las contribuciones originales que correspondan al autor. La publicación del repositorio permite mostrar y evaluar el prototipo; no concede una licencia abierta de reutilización. Consulta [LICENSE](LICENSE).
+
+Las fotografías, marcas, tipografías y materiales de terceros conservan sus respectivos titulares y condiciones. Su uso en el piloto no implica afiliación ni respaldo comercial. Consulta [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
