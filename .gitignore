@@ -1,0 +1,43 @@
+# Credenciales y configuración local
+.env
+.env.*
+!.env.example
+!.env.template
+.dev.vars
+.dev.vars.*
+secrets/
+.secrets/
+credentials/
+*credentials*.json
+service-account*.json
+service_account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+
+# Herramientas y sesiones locales
+.aws/
+.azure/
+.config/gcloud/
+.ssh/
+.codex/
+.openai/
+.netrc
+.npmrc
+
+# Dependencias, registros y temporales
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
